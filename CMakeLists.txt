@@ -4,3 +4,5 @@ project(GeometricShapes)
 set(CMAKE_CXX_STANDARD 14)
 
 # add_executable(GeometricShapes )
+add_executable(screen screen.cpp)
+add_executable(Task1 Task1.cpp)
