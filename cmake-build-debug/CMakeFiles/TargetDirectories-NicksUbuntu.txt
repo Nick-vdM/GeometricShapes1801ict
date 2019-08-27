@@ -1,0 +1,4 @@
+/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/screen.dir
+/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/Task1.dir

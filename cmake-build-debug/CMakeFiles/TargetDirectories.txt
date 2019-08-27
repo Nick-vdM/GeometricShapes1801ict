@@ -1,0 +1,4 @@
+/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/edit_cache.dir
+/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/screen.dir
+/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/Task1.dir

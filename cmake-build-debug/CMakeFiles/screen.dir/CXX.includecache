@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp
+iostream
+-
+cmath
+-
+cstdlib
+-
+
