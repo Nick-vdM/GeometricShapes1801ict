@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/screen.dir/screen.cpp.o"
   "screen.pdb"
-  "screen.exe"
-  "libscreen.dll.a"
+  "screen"
 )
 
 # Per-language clean rules from dependency scanning.

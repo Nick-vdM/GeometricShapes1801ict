@@ -48,6 +48,8 @@ public:
     //Functional methods
     int getSize();
 
+    int getTop();
+
     void shrink(); // Halves the size
 
     void extend(); // Doubles the size
@@ -103,7 +105,11 @@ Bunch<T>::Bunch(Bunch const &that) : listSize{that.listSize},
                                      arr{new T[listSize]{}},
                                      sorted{that.sorted},
                                      ascending{that.ascending},
-                                     top{that.top} {}
+                                     top{that.top} {
+   for(int i = 0; i < top; i++){
+       arr[i] = that.arr[i];
+   }
+}
 
 template<typename T>
 Bunch<T>::Bunch(Bunch &&that) noexcept : listSize{std::move(that.listSize)}, arr{std::move(that.arr)},
@@ -164,6 +170,11 @@ T Bunch<T>::operator[](int index) const {
 template<typename T>
 int Bunch<T>::getSize() {
     return listSize;
+}
+
+template<typename T>
+int Bunch<T>::getTop() {
+    return top;
 }
 
 template<typename T>
@@ -236,7 +247,6 @@ bool Bunch<T>::remove(int toRemove) {
     if (sorted) {
         //Move everything back
         for (int i = index; i < top - 1; i++) {
-            //TODO: verify this works
             arr[i] = arr[i + 1];
         }
     } else {

@@ -22,7 +22,7 @@ public:
 
     ~Point();
 
-    virtual void draw(screen s);
+    virtual void draw(screen & s);
 
     int getXAnchor();
 
@@ -61,7 +61,7 @@ public:
 
     ~Line();
 
-    void draw(screen s) override;
+    void draw(screen & s) override;
 
     void setDest(int xPos, int yPos);
 
@@ -96,7 +96,7 @@ public:
 
     ~Ellipse();
 
-    void draw(screen s) override;
+    void draw(screen & s) override;
 
     void setRadii(int xPos, int yPos);
 
@@ -129,7 +129,7 @@ public:
 
     ~Polygon();
 
-    void draw(screen s) override;
+    void draw(screen & s) override;
 
     int getSideCount();
 

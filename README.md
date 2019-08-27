@@ -41,6 +41,6 @@ copy pasted with a template
 ### 3. Main function ###
 * Four bunch objects: one for each shape
 * Provide a menu to draw all of the shapes
-* Include a Bunch of inputted shapes
+* Function to list all the objects that have been painted
 
 

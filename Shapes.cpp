@@ -20,7 +20,7 @@ Point &Point::operator=(Point &&that) noexcept = default;
 
 Point::~Point() = default;
 
-void Point::draw(screen s) {
+void Point::draw(screen &s) {
     s.point(xAnchor, yAnchor, symbol);
 }
 
@@ -69,7 +69,7 @@ Line &Line::operator=(Line &&that) noexcept = default;
 
 Line::~Line() = default;
 
-void Line::draw(screen s) {
+void Line::draw(screen &s) {
     s.line(xAnchor, yAnchor, toX, toY, symbol);
 }
 
@@ -114,7 +114,7 @@ Ellipse &Ellipse::operator=(Ellipse &&that) noexcept = default;
 
 Ellipse::~Ellipse() = default;
 
-void Ellipse::draw(screen s) {
+void Ellipse::draw(screen &s) {
     s.ellipse(xAnchor, yAnchor, xRadius, yRadius, symbol);
 }
 
@@ -139,10 +139,10 @@ int Ellipse::getYRadius() {
     return yRadius;
 }
 
-Polygon::Polygon() : Polygon(0, 0, 3, 1, 't'){}
+Polygon::Polygon() : Polygon(0, 0, 3, 1, 't') {}
 
 Polygon::Polygon(int pXAnchor, int pYAnchor, int pSideCount, int pSideLength, char pSymbol) :
-        Point(pXAnchor, pYAnchor, symbol), sideCount{pSideCount}, sideLength{pSideLength} {}
+        Point(pXAnchor, pYAnchor, pSymbol), sideCount{pSideCount}, sideLength{pSideLength} {}
 
 Polygon::Polygon(Polygon const &that) = default;
 
@@ -154,7 +154,7 @@ Polygon &Polygon::operator=(Polygon &&that) noexcept = default;
 
 Polygon::~Polygon() = default;
 
-void Polygon::draw(screen s) {
+void Polygon::draw(screen &s) {
     s.polygon(xAnchor, yAnchor, sideCount, sideLength, symbol);
 }
 
