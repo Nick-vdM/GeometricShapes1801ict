@@ -7,61 +7,6 @@
 #include "Bunch.cpp"
 #include <fstream>
 
-Point getPointFromStream(istream &input) {
-    char instruction[255];
-    input >> instruction;
-    int xAnchor = atoi(instruction);
-    input >> instruction;
-    int yAnchor = atoi(instruction);
-    input >> instruction;
-    char symbol = instruction[0];
-    return Point(xAnchor, yAnchor, symbol);
-}
-
-Line getLineFromStream(istream &input) {
-    char instruction[255];
-    input >> instruction;
-    int xAnchor = atoi(instruction);
-    input >> instruction;
-    int yAnchor = atoi(instruction);
-    input >> instruction;
-    int toX = atoi(instruction);
-    input >> instruction;
-    int toY = atoi(instruction);
-    input >> instruction;
-    char symbol = instruction[0];
-    return Line(xAnchor, yAnchor, toX, toY, symbol);
-}
-
-Ellipse getEllipseFromStream(istream &input) {
-    char instruction[255];
-    input >> instruction;
-    int xAnchor = atoi(instruction);
-    input >> instruction;
-    int yAnchor = atoi(instruction);
-    input >> instruction;
-    int xRadius = atoi(instruction);
-    input >> instruction;
-    int yRadius = atoi(instruction);
-    input >> instruction;
-    char symbol = instruction[0];
-    return Ellipse(xAnchor, yAnchor, xRadius, yRadius, symbol);
-}
-
-Polygon getPolygonFromStream(istream &input) {
-    char instruction[255];
-    input >> instruction;
-    int xAnchor = atoi(instruction);
-    input >> instruction;
-    int yAnchor = atoi(instruction);
-    input >> instruction;
-    int sideCount = atoi(instruction);
-    input >> instruction;
-    int sideLength = atoi(instruction);
-    input >> instruction;
-    char symbol = instruction[0];
-    return Polygon(xAnchor, yAnchor, sideCount, sideLength, symbol);
-}
 
 void printHelp() {
     std::cout << "==============================HELP MENU================================="
@@ -71,6 +16,9 @@ void printHelp() {
               << "\t line <startX> <startY> <toX> <toY> <Symbol>" << std::endl
               << "\t ellipse <centreX> <centreY> <xRadius> <yRadius> <Symbol>" << std::endl
               << "\t Polygon <centreX> <centreY> <numberOfSides> <sideLength> <Symbol>" << std::endl
+              << "Saving/Loading:" << std::endl
+              << "\tsave <saveName>" << std::endl
+              << "\tload <loadName>" << std::endl
               << "Note the board is x <- [-20, 20] & y <- [-20, 20]" << std::endl
               << "Type enter 'display' to show the board" << std::endl
               << "Invalid input brings up this screen" << std::endl
@@ -85,13 +33,96 @@ public:
     Bunch<Line> lines;
     Bunch<Ellipse> ellipses;
     Bunch<Polygon> polygons;
+    screen board;
 
-    void loadFromFile(char *path, screen board);
+    void addPoint(istream &input) {
+        Point pointToInsert = getPointFromStream(input);
+        pointToInsert.draw(board);
+        points.insert(pointToInsert);
+    }
+
+    void addLine(istream &input) {
+        Line lineToInsert = getLineFromStream(input);
+        lineToInsert.draw(board);
+        lines.insert(lineToInsert);
+    }
+
+    void addEllipse(istream &input) {
+        Ellipse ellipseToInsert = getEllipseFromStream(input);
+        ellipseToInsert.draw(board);
+        ellipses.insert(ellipseToInsert);
+    }
+
+    void addPolygon(istream &input) {
+        Polygon polygonToInsert = getPolygonFromStream(input);
+        polygonToInsert.draw(board);
+        polygons.insert(polygonToInsert);
+    }
+
+    void loadFromFile(char *path);
 
     void saveToFile(char *path);
+
+private:
+    static Point getPointFromStream(istream &input) {
+        char instruction[255];
+        input >> instruction;
+        int xAnchor = stoi(instruction);
+        input >> instruction;
+        int yAnchor = stoi(instruction);
+        input >> instruction;
+        char symbol = instruction[0];
+        return Point(xAnchor, yAnchor, symbol);
+    }
+
+    static Line getLineFromStream(istream &input) {
+        char instruction[255];
+        input >> instruction;
+        int xAnchor = stoi(instruction);
+        input >> instruction;
+        int yAnchor = stoi(instruction);
+        input >> instruction;
+        int toX = stoi(instruction);
+        input >> instruction;
+        int toY = stoi(instruction);
+        input >> instruction;
+        char symbol = instruction[0];
+        return Line(xAnchor, yAnchor, toX, toY, symbol);
+    }
+
+    static Ellipse getEllipseFromStream(istream &input) {
+        char instruction[255];
+        input >> instruction;
+        int xAnchor = stoi(instruction);
+        input >> instruction;
+        int yAnchor = stoi(instruction);
+        input >> instruction;
+        int xRadius = stoi(instruction);
+        input >> instruction;
+        int yRadius = stoi(instruction);
+        input >> instruction;
+        char symbol = instruction[0];
+        return Ellipse(xAnchor, yAnchor, xRadius, yRadius, symbol);
+    }
+
+    static Polygon getPolygonFromStream(istream &input) {
+        char instruction[255];
+        input >> instruction;
+        int xAnchor = stoi(instruction);
+        input >> instruction;
+        int yAnchor = stoi(instruction);
+        input >> instruction;
+        int sideCount = stoi(instruction);
+        input >> instruction;
+        int sideLength = stoi(instruction);
+        input >> instruction;
+        char symbol = instruction[0];
+        return Polygon(xAnchor, yAnchor, sideCount, sideLength, symbol);
+    }
+
 };
 
-void groupOfBunches::loadFromFile(char *path, screen board) {
+void groupOfBunches::loadFromFile(char *path) {
     fstream ifs(path);
     if (!ifs) {
         std::cerr << "File failed to open";
@@ -101,33 +132,26 @@ void groupOfBunches::loadFromFile(char *path, screen board) {
     lines.clear();
     ellipses.clear();
     polygons.clear();
+    board.clear();
     char word[255];
     while (ifs.peek() != EOF) {
         ifs >> word;
         if (strcmp(word, "point") == 0) {
             //Skip 'x y s'
             for (int i = 0; i < 3; i++) ifs >> word;
-            Point pointToInsert = getPointFromStream(ifs);
-            pointToInsert.draw(board);
-            points.insert(pointToInsert);
+            addPoint(ifs);
         } else if (strcmp(word, "line") == 0) {
             //Skip 'x y xp yp s'
             for (int i = 0; i < 5; i++) ifs >> word;
-            Line lineToInsert = getLineFromStream(ifs);
-            lineToInsert.draw(board);
-            lines.insert(lineToInsert);
+            addLine(ifs);
         } else if (strcmp(word, "ellipse") == 0) {
             //skip 'x y a b s'
             for (int i = 0; i < 5; i++) ifs >> word;
-            Ellipse ellipseToInsert = getEllipseFromStream(ifs);
-            ellipseToInsert.draw(board);
-            ellipses.insert(ellipseToInsert);
+            addEllipse(ifs);
         } else if (strcmp(word, "polygon") == 0) {
             //skip 'x y a n l s'
             for (int i = 0; i < 5; i++) ifs >> word;
-            Polygon polygonToInsert = getPolygonFromStream(ifs);
-            polygonToInsert.draw(board);
-            polygons.insert(polygonToInsert);
+            addPolygon(ifs);
         }
     }
 }
@@ -163,21 +187,13 @@ void demonstrate() {
         }
 
         if (strcmp("point", instruction) == 0) {
-            Point pointToInsert = getPointFromStream(std::cin);
-            pointToInsert.draw(board);
-            Shapes.points.insert(pointToInsert);
+            Shapes.addPoint(std::cin);
         } else if (strcmp("line", instruction) == 0) {
-            Line lineToInsert = getLineFromStream(std::cin);
-            lineToInsert.draw(board);
-            Shapes.lines.insert(lineToInsert);
+            Shapes.addLine(std::cin);
         } else if (strcmp("ellipse", instruction) == 0) {
-            Ellipse ellipseToInsert = getEllipseFromStream(std::cin);
-            ellipseToInsert.draw(board);
-            Shapes.ellipses.insert(ellipseToInsert);
+            Shapes.addEllipse(std::cin);
         } else if (strcmp("polygon", instruction) == 0) {
-            Polygon polyToInsert = getPolygonFromStream(std::cin);
-            polyToInsert.draw(board);
-            Shapes.polygons.insert(polyToInsert);
+            Shapes.addPolygon(std::cin);
         } else if (strcmp("list", instruction) == 0) {
             Shapes.points.display(std::cout);
             Shapes.lines.display(std::cout);
@@ -190,13 +206,14 @@ void demonstrate() {
             Shapes.saveToFile(instruction);
         } else if (strcmp("load", instruction) == 0) {
             std::cin >> instruction;
-            Shapes.loadFromFile(instruction, board);
+            Shapes.loadFromFile(instruction);
         } else if (strcmp("exit", instruction) == 0) {
             keepLooping = false;
         } else {
             printHelp();
         }
     }
+
 }
 
 int main(int argc, char *argv[]) {

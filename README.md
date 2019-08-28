@@ -10,11 +10,9 @@ The proposed structure to solve it is as follows:
 ## Part 2.2 - My Template Painter ##
 The basic classes and functions being made here are:
 ### 1. Shapes and properties ###
-Question: Given that these are all just 
-attributes, would it be convention to use
-structures?
+* Note everything needs a display & draw method
 #### Point ####
-* x and y
+* x, y and symbol
 
 #### Line ####
 * Two points; source & target
@@ -44,3 +42,4 @@ copy pasted with a template
 * Function to list all the objects that have been painted
 
 #### 3.1. Saving shapes ####
+* Save and load from files
