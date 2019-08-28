@@ -4,6 +4,7 @@
 
 #ifndef GEOMETRICSHAPES_SHAPES_H
 #define GEOMETRICSHAPES_SHAPES_H
+
 #include "screen.cpp"
 
 class Point {
@@ -22,7 +23,9 @@ public:
 
     ~Point();
 
-    virtual void draw(screen & s);
+    virtual void draw(screen &s);
+
+    virtual void info(ostream &output);
 
     int getXAnchor();
 
@@ -61,7 +64,9 @@ public:
 
     ~Line();
 
-    void draw(screen & s) override;
+    void draw(screen &s) override;
+
+    void info(ostream & output) override;
 
     void setDest(int xPos, int yPos);
 
@@ -96,7 +101,9 @@ public:
 
     ~Ellipse();
 
-    void draw(screen & s) override;
+    void draw(screen &s) override;
+
+    void info(ostream & output) override;
 
     void setRadii(int xPos, int yPos);
 
@@ -129,7 +136,9 @@ public:
 
     ~Polygon();
 
-    void draw(screen & s) override;
+    void draw(screen &s) override;
+
+    void info(ostream & output) override;
 
     int getSideCount();
 

@@ -1,24 +1,9 @@
 //
-// Created by nick on 26/8/19.
-//
-
-//
-// Created by Nick van der Merwe on 6/08/2019.
+// Created by Nick van der Merwe on 26/8/19.
 //
 
 #include <iostream>
 #include <bits/stdc++.h>
-
-//template<typename T>
-//int highestNotZero(int size, T *arr) {
-//    //Takes in an array and finds what's the highest index + 1 that isn't a default value
-//    T defaultType{};
-//    int index = -1;
-//    for (int i = 0; i < size; i++) {
-//        if (arr[i] != defaultType) {index = i;}
-//    }
-//    return index + 1;
-//}
 
 template<typename T>
 class Bunch {
@@ -70,11 +55,9 @@ public:
 
     int search(T toFind); //Finds the index of the given point
 
-    void display(); //Prints the Bunch to stdout
+    void display(ostream & output); //Prints the Bunch to stdout
 
-    //Overriding << operator too for readability despite it not being required
-    friend std::ostream &operator<<(std::ostream &os, Bunch<T> const &that);
-
+    void clear();
 private:
     int listSize;
     T *arr;
@@ -314,30 +297,13 @@ bool Bunch<T>::getAscend() const {
 }
 
 template<typename T>
-void Bunch<T>::display() {
-    //Displays the number of elements and the elements in the Bunch
-    std::cout << "Integers: " << top << " Items: [";
-    for (int i = 0; i < top; i++) {
-        std::cout << arr[i];
-        if (i != top - 1) {
-            std::cout << ", ";
-        }
+void Bunch<T>::display(ostream & output) {
+    for(int i = 0; i < top; i++){
+        arr[i].info(output);
     }
-    std::cout << "]";
 }
 
 template<typename T>
-std::ostream &operator<<(std::ostream &os, const Bunch<T> &that) {
-    //NOTE: I would delegate and ONLY have one of display or this, but this
-    //isn't actually on the criteria and this seemed significantly neater for demonstrate();
-    os << "Integers: " << that.top << " Items: [";
-    for (int i = 0; i < that.top; i++) {
-        os << that.arr[i];
-        if (i != that.top - 1) {
-            os << ", ";
-        }
-    }
-    os << "]";
-    return os;
+void Bunch<T>::clear() {
+    top = 0;
 }
-

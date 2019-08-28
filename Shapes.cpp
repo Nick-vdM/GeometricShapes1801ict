@@ -24,6 +24,14 @@ void Point::draw(screen &s) {
     s.point(xAnchor, yAnchor, symbol);
 }
 
+void Point::info(ostream &output) {
+    //Prints the information to console
+    output << "point x y s \t\t"
+           << xAnchor << " "
+           << yAnchor << " "
+           << symbol << std::endl;
+}
+
 int Point::getXAnchor() {
     return xAnchor;
 }
@@ -73,6 +81,15 @@ void Line::draw(screen &s) {
     s.line(xAnchor, yAnchor, toX, toY, symbol);
 }
 
+void Line::info(ostream &output) {
+    output << "line x y xp yp s \t\t"
+           << xAnchor << " "
+           << yAnchor << " "
+           << toX << " "
+           << toY << " "
+           << symbol << std::endl;
+}
+
 void Line::setDest(int xPos, int yPos) {
     toX = xPos;
     toY = yPos;
@@ -118,6 +135,15 @@ void Ellipse::draw(screen &s) {
     s.ellipse(xAnchor, yAnchor, xRadius, yRadius, symbol);
 }
 
+void Ellipse::info(ostream & output) {
+    output << "ellipse x y a b s \t\t"
+           << xAnchor << " "
+           << yAnchor << " "
+           << xRadius << " "
+           << yRadius << " "
+           << symbol << std::endl;
+}
+
 void Ellipse::setRadii(int xPos, int yPos) {
     xRadius = xPos;
     yRadius = yPos;
@@ -158,8 +184,17 @@ void Polygon::draw(screen &s) {
     s.polygon(xAnchor, yAnchor, sideCount, sideLength, symbol);
 }
 
+void Polygon::info(ostream &output) {
+    output << "polygon x y n l s \t\t"
+           << xAnchor << " "
+           << yAnchor << " "
+           << sideCount << " "
+           << sideLength << " "
+           << symbol << std::endl;
+}
+
 int Polygon::getSideCount() {
-    return 0;
+    return sideCount;
 }
 
 void Polygon::setSideCount(int count) {
