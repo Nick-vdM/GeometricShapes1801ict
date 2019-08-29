@@ -61,11 +61,11 @@ char Point::getSymbol() {
     return symbol;
 }
 
-//Line
+
 Line::Line() : Line(0, 0, 1, 1, 'L') {}
 
-Line::Line(int pFromX, int pFromY, int pToX, int pToY, char pSymbol) : Point::Point(pFromX, pFromY, pSymbol),
-                                                                       toX{pToX}, toY{pToY} {}
+Line::Line(int pXAnchor, int pYAnchor, int pToX, int pToY, char pSymbol) : xAnchor{pXAnchor}, yAnchor{pYAnchor},
+                                                                           toX{pToX}, toY{pToY}, symbol{pSymbol} {}
 
 Line::Line(Line const &that) = default;
 
@@ -90,28 +90,57 @@ void Line::info(ostream &output) {
            << symbol << std::endl;
 }
 
+int Line::getXAnchor() {
+    return xAnchor;
+}
+
+int Line::getYAnchor() {
+    return yAnchor;
+}
+
+void Line::setYAnchor(int pos) {
+    yAnchor = pos;
+}
+
+void Line::setXAnchor(int pos) {
+    xAnchor = pos;
+}
+
+void Line::setAnchors(int xPos, int yPos) {
+    xAnchor = xPos;
+    yAnchor = yPos;
+}
+
+void Line::setSymbol(char pSymbol) {
+    symbol = pSymbol;
+}
+
+char Line::getSymbol() {
+    return symbol;
+}
+
 void Line::setDest(int xPos, int yPos) {
     toX = xPos;
     toY = yPos;
 }
 
-int Line::getXDest() {
+int Line::getToX() {
     return toX;
 }
 
-int Line::getYDest() {
+int Line::getToY() {
     return toY;
 }
 
-void Line::setYDest(int pos) {
+void Line::setToY(int pos) {
     toY = pos;
 }
 
-void Line::setXDest(int pos) {
+void Line::setToX(int pos) {
     toX = pos;
 }
 
-void Line::setDests(int xPos, int yPos) {
+void Line::setTos(int xPos, int yPos) {
     toX = xPos;
     toY = yPos;
 }
@@ -119,7 +148,7 @@ void Line::setDests(int xPos, int yPos) {
 Ellipse::Ellipse() : Ellipse(0, 0, 1, 1, 'E') {}
 
 Ellipse::Ellipse(int pXAnchor, int pYAnchor, int pXRadius, int pYRadius, char pSymbol) :
-        Point(pXAnchor, pYAnchor, pSymbol), xRadius{pXRadius}, yRadius{pYRadius} {}
+        xAnchor{pXAnchor}, yAnchor{pYAnchor}, xRadius{pXRadius}, yRadius{pYRadius}, symbol{pSymbol} {}
 
 Ellipse::Ellipse(Ellipse const &that) = default;
 
@@ -135,13 +164,42 @@ void Ellipse::draw(screen &s) {
     s.ellipse(xAnchor, yAnchor, xRadius, yRadius, symbol);
 }
 
-void Ellipse::info(ostream & output) {
+void Ellipse::info(ostream &output) {
     output << "ellipse x y a b s \t\t"
            << xAnchor << " "
            << yAnchor << " "
            << xRadius << " "
            << yRadius << " "
            << symbol << std::endl;
+}
+
+int Ellipse::getXAnchor() {
+    return xAnchor;
+}
+
+int Ellipse::getYAnchor() {
+    return yAnchor;
+}
+
+void Ellipse::setYAnchor(int pos) {
+    yAnchor = pos;
+}
+
+void Ellipse::setXAnchor(int pos) {
+    xAnchor = pos;
+}
+
+void Ellipse::setAnchors(int xPos, int yPos) {
+    xAnchor = xPos;
+    yAnchor = yPos;
+}
+
+void Ellipse::setSymbol(char pSymbol) {
+    symbol = pSymbol;
+}
+
+char Ellipse::getSymbol() {
+    return symbol;
 }
 
 void Ellipse::setRadii(int xPos, int yPos) {
@@ -168,7 +226,7 @@ int Ellipse::getYRadius() {
 Polygon::Polygon() : Polygon(0, 0, 3, 1, 't') {}
 
 Polygon::Polygon(int pXAnchor, int pYAnchor, int pSideCount, int pSideLength, char pSymbol) :
-        Point(pXAnchor, pYAnchor, pSymbol), sideCount{pSideCount}, sideLength{pSideLength} {}
+        xAnchor{pXAnchor}, yAnchor{pYAnchor}, sideCount{pSideCount}, sideLength{pSideLength}, symbol{pSymbol} {}
 
 Polygon::Polygon(Polygon const &that) = default;
 
@@ -191,6 +249,35 @@ void Polygon::info(ostream &output) {
            << sideCount << " "
            << sideLength << " "
            << symbol << std::endl;
+}
+
+int Polygon::getXAnchor() {
+    return xAnchor;
+}
+
+int Polygon::getYAnchor() {
+    return yAnchor;
+}
+
+void Polygon::setYAnchor(int pos) {
+    yAnchor = pos;
+}
+
+void Polygon::setXAnchor(int pos) {
+    xAnchor = pos;
+}
+
+void Polygon::setAnchors(int xPos, int yPos) {
+    xAnchor = xPos;
+    yAnchor = yPos;
+}
+
+void Polygon::setSymbol(char pSymbol) {
+    symbol = pSymbol;
+}
+
+char Polygon::getSymbol() {
+    return symbol;
 }
 
 int Polygon::getSideCount() {

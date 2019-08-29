@@ -5,7 +5,6 @@
 #include <iostream>
 #include "Shapes.cpp"
 #include "Bunch.cpp"
-#include <fstream>
 
 
 void printHelp() {
@@ -168,8 +167,44 @@ void groupOfBunches::saveToFile(char *path) {
     polygons.display(ofs);
 }
 
-void demonstrate() {
+void testConstructors(){
+    //VERIFY ME WITH A DEBUGGER (I verified it myself, but I didn't want to flood with prints
+    //or make a complicated series of asserts
+    //Defaults
+    Point pointA{};
+    Line lineA{};
+    Ellipse ellipseA{};
+    Polygon polygonA{};
+    //Paramaters
+    Point pointP{1, 2, '*'};
+    Line lineP{3, 4, 5, 6, '('};
+    Ellipse ellipseP{7, 8, 9, 10, '^'};
+    Polygon polygonP{11, 12, 13, 14, '!'};
+    //Copy ctors
+    Point pointB = pointP;
+    Line lineB = lineP;
+    Ellipse ellipseB = ellipseP;
+    Polygon polygonB = polygonP;
+    //Move ctors
+    Point && pointMC{2, 1, '!'};
+    Line && lineMC{2, 3, 4, 1, '@'};
+    Ellipse && ellipseMC{5, 3, 1, 5, '#'};
+    Polygon && polygonMC{7, 3, 1, 3, '$'};
+    //Copy assignment
+    pointA = pointB;
+    lineA = lineB;
+    ellipseA = ellipseB;
+    polygonA = polygonB;
+    //Move assignment
+    pointA = std::move(pointMC);
+    lineA = std::move(lineMC);
+    ellipseMC = std::move(ellipseMC);
+    polygonA = std::move(polygonMC);
+    //Destructors
+}
 
+void demonstrate() {
+    testConstructors(); // Silently check these - you can verify with a debugger
     std::cout << "=================Template Painter by Nick van der Merwe============" << std::endl
               << "This is a small demo of a drawboard using an ASCII board of letters" << std::endl;
     printHelp();

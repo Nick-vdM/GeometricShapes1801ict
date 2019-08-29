@@ -23,9 +23,9 @@ public:
 
     ~Point();
 
-    virtual void draw(screen &s);
+    void draw(screen &s);
 
-    virtual void info(ostream &output);
+    void info(ostream &output);
 
     int getXAnchor();
 
@@ -48,11 +48,11 @@ protected:
 
 };
 
-class Line : public Point {
+class Line {
 public:
     Line();
 
-    Line(int pFromX, int pFromY, int pToX, int pToY, char pSymbol);
+    Line(int pXAnchor, int pYAnchor, int pToX, int pToY, char pSymbol);
 
     Line(Line const &that);
 
@@ -64,28 +64,45 @@ public:
 
     ~Line();
 
-    void draw(screen &s) override;
+    void draw(screen &s);
 
-    void info(ostream & output) override;
+    void info(ostream &output);
+
+    int getXAnchor();
+
+    int getYAnchor();
+
+    void setYAnchor(int pos);
+
+    void setXAnchor(int pos);
+
+    void setAnchors(int xPos, int yPos);
+
+    void setSymbol(char pSymbol);
+
+    char getSymbol();
 
     void setDest(int xPos, int yPos);
 
-    int getXDest();
+    int getToX();
 
-    int getYDest();
+    int getToY();
 
-    void setYDest(int pos);
+    void setToY(int pos);
 
-    void setXDest(int pos);
+    void setToX(int pos);
 
-    void setDests(int xPos, int yPos);
+    void setTos(int xPos, int yPos);
 
 private:
+    int xAnchor;
+    int yAnchor;
     int toX;
     int toY;
+    char symbol;
 };
 
-class Ellipse : public Point {
+class Ellipse {
 public:
     Ellipse();
 
@@ -101,9 +118,23 @@ public:
 
     ~Ellipse();
 
-    void draw(screen &s) override;
+    void draw(screen &s);
 
-    void info(ostream & output) override;
+    void info(ostream &output);
+
+    int getXAnchor();
+
+    int getYAnchor();
+
+    void setYAnchor(int pos);
+
+    void setXAnchor(int pos);
+
+    void setAnchors(int xPos, int yPos);
+
+    void setSymbol(char pSymbol);
+
+    char getSymbol();
 
     void setRadii(int xPos, int yPos);
 
@@ -116,11 +147,14 @@ public:
     int getYRadius();
 
 public:
+    int xAnchor;
+    int yAnchor;
     int xRadius;
     int yRadius;
+    char symbol;
 };
 
-class Polygon : public Point {
+class Polygon {
 public:
     Polygon();
 
@@ -136,9 +170,23 @@ public:
 
     ~Polygon();
 
-    void draw(screen &s) override;
+    void draw(screen &s);
 
-    void info(ostream & output) override;
+    int getXAnchor();
+
+    int getYAnchor();
+
+    void setYAnchor(int pos);
+
+    void setXAnchor(int pos);
+
+    void setAnchors(int xPos, int yPos);
+
+    void setSymbol(char pSymbol);
+
+    char getSymbol();
+
+    void info(ostream &output);
 
     int getSideCount();
 
@@ -149,8 +197,11 @@ public:
     void setSideLength(int length);
 
 protected:
+    int xAnchor;
+    int yAnchor;
     int sideCount;
     int sideLength;
+    char symbol;
 };
 
 #endif //GEOMETRICSHAPES_SHAPES_H
