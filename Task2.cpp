@@ -3,7 +3,7 @@
 //
 
 #include <iostream>
-#include "ConcreteShapes.cpp"
+#include "AbstractShapes.cpp"
 #include "Bunch.cpp"
 
 
@@ -28,39 +28,32 @@ void printHelp() {
 
 class BunchOfShapes {
 public:
-    Bunch<Point> points;
-    Bunch<Line> lines;
-    Bunch<Ellipse> ellipses;
-    Bunch<Polygon> polygons;
+    Bunch<Shape *> shapes;
     screen board;
 
     void addPoint(istream &input) {
         Point pointToInsert = getPointFromStream(input);
         pointToInsert.draw(board);
-        points.insert(pointToInsert);
+        shapes.insert(&pointToInsert);
     }
 
     void addLine(istream &input) {
         Line lineToInsert = getLineFromStream(input);
         lineToInsert.draw(board);
-        lines.insert(lineToInsert);
+        shapes.insert(&lineToInsert);
     }
 
     void addEllipse(istream &input) {
         Ellipse ellipseToInsert = getEllipseFromStream(input);
         ellipseToInsert.draw(board);
-        ellipses.insert(ellipseToInsert);
+        shapes.insert(&ellipseToInsert);
     }
 
     void addPolygon(istream &input) {
         Polygon polygonToInsert = getPolygonFromStream(input);
         polygonToInsert.draw(board);
-        polygons.insert(polygonToInsert);
+        shapes.insert(&polygonToInsert);
     }
-
-    void loadFromFile(char *path);
-
-    void saveToFile(char *path);
 
 private:
     static Point getPointFromStream(istream &input) {
@@ -121,53 +114,7 @@ private:
 
 };
 
-void BunchOfShapes::loadFromFile(char *path) {
-    fstream ifs(path);
-    if (!ifs) {
-        std::cerr << "File failed to open";
-        return;
-    }
-    points.clear();
-    lines.clear();
-    ellipses.clear();
-    polygons.clear();
-    board.clear();
-    char word[255];
-    while (ifs.peek() != EOF) {
-        ifs >> word;
-        if (strcmp(word, "point") == 0) {
-            //Skip 'x y s'
-            for (int i = 0; i < 3; i++) ifs >> word;
-            addPoint(ifs);
-        } else if (strcmp(word, "line") == 0) {
-            //Skip 'x y xp yp s'
-            for (int i = 0; i < 5; i++) ifs >> word;
-            addLine(ifs);
-        } else if (strcmp(word, "ellipse") == 0) {
-            //skip 'x y a b s'
-            for (int i = 0; i < 5; i++) ifs >> word;
-            addEllipse(ifs);
-        } else if (strcmp(word, "polygon") == 0) {
-            //skip 'x y a n l s'
-            for (int i = 0; i < 5; i++) ifs >> word;
-            addPolygon(ifs);
-        }
-    }
-}
-
-void BunchOfShapes::saveToFile(char *path) {
-    ofstream ofs(path);
-    if (!ofs) {
-        std::cerr << "Failed to open file";
-        exit(EXIT_FAILURE);
-    }
-    points.display(ofs);
-    lines.display(ofs);
-    ellipses.display(ofs);
-    polygons.display(ofs);
-}
-
-void testConstructors(){
+void testConstructors() {
     //VERIFY ME WITH A DEBUGGER (I verified it myself, but I didn't want to flood with prints
     //or make a complicated series of asserts
     //Defaults
@@ -186,10 +133,10 @@ void testConstructors(){
     Ellipse ellipseB = ellipseP;
     Polygon polygonB = polygonP;
     //Move ctors
-    Point && pointMC{2, 1, '!'};
-    Line && lineMC{2, 3, 4, 1, '@'};
-    Ellipse && ellipseMC{5, 3, 1, 5, '#'};
-    Polygon && polygonMC{7, 3, 1, 3, '$'};
+    Point &&pointMC{2, 1, '!'};
+    Line &&lineMC{2, 3, 4, 1, '@'};
+    Ellipse &&ellipseMC{5, 3, 1, 5, '#'};
+    Polygon &&polygonMC{7, 3, 1, 3, '$'};
     //Copy assignment
     pointA = pointB;
     lineA = lineB;
@@ -229,18 +176,9 @@ void demonstrate() {
         } else if (strcmp("polygon", instruction) == 0) {
             Shapes.addPolygon(std::cin);
         } else if (strcmp("list", instruction) == 0) {
-            Shapes.points.display(std::cout);
-            Shapes.lines.display(std::cout);
-            Shapes.ellipses.display(std::cout);
-            Shapes.polygons.display(std::cout);
+            Shapes.shapes.display();
         } else if (strcmp("display", instruction) == 0) {
             Shapes.board.display();
-        } else if (strcmp("save", instruction) == 0) {
-            std::cin >> instruction;
-            Shapes.saveToFile(instruction);
-        } else if (strcmp("load", instruction) == 0) {
-            std::cin >> instruction;
-            Shapes.loadFromFile(instruction);
         } else if (strcmp("exit", instruction) == 0) {
             keepLooping = false;
         } else {

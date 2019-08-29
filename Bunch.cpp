@@ -55,9 +55,12 @@ public:
 
     int search(T toFind); //Finds the index of the given point
 
-    void display(ostream & output); //Prints the Bunch to stdout
+    void display(); // Used for when its a pointer
+
+    void display(ostream &output); //Prints the Bunch to stdout
 
     void clear();
+
 private:
     int listSize;
     T *arr;
@@ -89,9 +92,9 @@ Bunch<T>::Bunch(Bunch const &that) : listSize{that.listSize},
                                      sorted{that.sorted},
                                      ascending{that.ascending},
                                      top{that.top} {
-   for(int i = 0; i < top; i++){
-       arr[i] = that.arr[i];
-   }
+    for (int i = 0; i < top; i++) {
+        arr[i] = that.arr[i];
+    }
 }
 
 template<typename T>
@@ -297,8 +300,15 @@ bool Bunch<T>::getAscend() const {
 }
 
 template<typename T>
-void Bunch<T>::display(ostream & output) {
-    for(int i = 0; i < top; i++){
+void Bunch<T>::display() {
+    for (int i = 0; i < top; i++) {
+        arr[i]->info();
+    }
+}
+
+template<typename T>
+void Bunch<T>::display(ostream &output) {
+    for (int i = 0; i < top; i++) {
         arr[i].info(output);
     }
 }

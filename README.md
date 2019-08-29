@@ -1,15 +1,15 @@
 # Geometric Shapes #
 
-This is a small project done for 1810ICT with the requirements 
+This is a small project done for 1801ICT with the requirements 
 in project3.pdf. In short, the screen.cpp file is used to display a 
 variety of classes. Its main purpose is to exercise inheritance and 
 polymorphism.
 
 The proposed structure to solve it is as follows:
 
-## Part 2.2 - My Template Painter ##
+## Task 1 - My Template Painter ##
 The basic classes and functions being made here are:
-### 1. Shapes and properties ###
+### 1. properties ###
 * Note everything needs a display & draw method
 #### Point ####
 * x, y and symbol
@@ -42,4 +42,18 @@ copy pasted with a template
 * Function to list all the objects that have been painted
 
 #### 3.1. Saving shapes ####
-* Save and load from files
+* Save and load from files using stream direction to 
+simplify it
+
+## Task 2. My Polymorphic Painter ##
+Essentially, we're turning point into an abstract
+shape class and letting everything inherit it here
+### 1. Abstract Classes ###
+* Make draw & info pure virtual
+* Destructor should be pure virtual - using
+abstract class pointers (look into them)
+### 2. Main Console ###
+* Essentially the same, but only use a bunch<Shape*>
+* Ensure memory allocation is properly done
+* No down casting or switches for drawing - call
+polymorphic methods using shape pointer

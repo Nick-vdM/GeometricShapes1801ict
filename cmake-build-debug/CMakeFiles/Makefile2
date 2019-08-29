@@ -65,13 +65,50 @@ CMAKE_SOURCE_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - O
 CMAKE_BINARY_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"
 
 #=============================================================================
+# Target rules for target CMakeFiles/Task2.dir
+
+# All Build rule for target.
+CMakeFiles/Task2.dir/all:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/depend
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target Task2"
+.PHONY : CMakeFiles/Task2.dir/all
+
+# Include target in all.
+all: CMakeFiles/Task2.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/Task2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Task2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/Task2.dir/rule
+
+# Convenience name for target.
+Task2: CMakeFiles/Task2.dir/rule
+
+.PHONY : Task2
+
+# clean rule for target.
+CMakeFiles/Task2.dir/clean:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/clean
+.PHONY : CMakeFiles/Task2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Task2.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/screen.dir
 
 # All Build rule for target.
 CMakeFiles/screen.dir/all:
 	$(MAKE) -f CMakeFiles/screen.dir/build.make CMakeFiles/screen.dir/depend
 	$(MAKE) -f CMakeFiles/screen.dir/build.make CMakeFiles/screen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target screen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target screen"
 .PHONY : CMakeFiles/screen.dir/all
 
 # Include target in all.

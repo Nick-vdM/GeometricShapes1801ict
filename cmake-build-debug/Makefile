@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named Task2
+
+# Build rule for target.
+Task2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Task2
+.PHONY : Task2
+
+# fast build rule for target.
+Task2/fast:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/build
+.PHONY : Task2/fast
+
+#=============================================================================
 # Target rules for targets named screen
 
 # Build rule for target.
@@ -163,6 +176,33 @@ Task1.cpp.s:
 	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/Task1.cpp.s
 .PHONY : Task1.cpp.s
 
+Task2.o: Task2.cpp.o
+
+.PHONY : Task2.o
+
+# target to build an object file
+Task2.cpp.o:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/Task2.cpp.o
+.PHONY : Task2.cpp.o
+
+Task2.i: Task2.cpp.i
+
+.PHONY : Task2.i
+
+# target to preprocess a source file
+Task2.cpp.i:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/Task2.cpp.i
+.PHONY : Task2.cpp.i
+
+Task2.s: Task2.cpp.s
+
+.PHONY : Task2.s
+
+# target to generate assembly for a file
+Task2.cpp.s:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/Task2.cpp.s
+.PHONY : Task2.cpp.s
+
 screen.o: screen.cpp.o
 
 .PHONY : screen.o
@@ -198,11 +238,15 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... Task2"
 	@echo "... screen"
 	@echo "... Task1"
 	@echo "... Task1.o"
 	@echo "... Task1.i"
 	@echo "... Task1.s"
+	@echo "... Task2.o"
+	@echo "... Task2.i"
+	@echo "... Task2.s"
 	@echo "... screen.o"
 	@echo "... screen.i"
 	@echo "... screen.s"

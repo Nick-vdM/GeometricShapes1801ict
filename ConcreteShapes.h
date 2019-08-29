@@ -2,8 +2,8 @@
 // Created by nick on 26/8/19.
 //
 
-#ifndef GEOMETRICSHAPES_SHAPES_H
-#define GEOMETRICSHAPES_SHAPES_H
+#ifndef GEOMETRICSHAPES_CONCRETESHAPES_H
+#define GEOMETRICSHAPES_CONCRETESHAPES_H
 
 #include "screen.cpp"
 
@@ -41,7 +41,7 @@ public:
 
     char getSymbol();
 
-protected:
+private:
     int xAnchor;
     int yAnchor;
     char symbol;
@@ -146,7 +146,7 @@ public:
 
     int getYRadius();
 
-public:
+private:
     int xAnchor;
     int yAnchor;
     int xRadius;
@@ -196,7 +196,7 @@ public:
 
     void setSideLength(int length);
 
-protected:
+private:
     int xAnchor;
     int yAnchor;
     int sideCount;
@@ -204,4 +204,4 @@ protected:
     char symbol;
 };
 
-#endif //GEOMETRICSHAPES_SHAPES_H
+#endif //GEOMETRICSHAPES_CONCRETESHAPES_H
