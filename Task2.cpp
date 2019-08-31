@@ -8,16 +8,14 @@
 
 
 void printHelp() {
-    std::cout << "==============================HELP MENU================================="
+    std::cout << "==============================HELP MENU=================================" << std::endl
               << "To insert a shape type <shapename> <units>." << std::endl
               << "Shapes:" << std::endl
               << "\t point <x> <y> <Symbol>" << std::endl
               << "\t line <startX> <startY> <toX> <toY> <Symbol>" << std::endl
               << "\t ellipse <centreX> <centreY> <xRadius> <yRadius> <Symbol>" << std::endl
               << "\t Polygon <centreX> <centreY> <numberOfSides> <sideLength> <Symbol>" << std::endl
-              << "Saving/Loading:" << std::endl
-              << "\tsave <saveName>" << std::endl
-              << "\tload <loadName>" << std::endl
+              << "THERE IS NO SAVING IN TASK 2" << std::endl
               << "Note the board is x <- [-20, 20] & y <- [-20, 20]" << std::endl
               << "Type enter 'display' to show the board" << std::endl
               << "Invalid input brings up this screen" << std::endl
@@ -31,28 +29,48 @@ public:
     Bunch<Shape *> shapes;
     screen board;
 
+    BunchOfShapes() = default;
+
+    BunchOfShapes(BunchOfShapes &that) = default;
+
+    BunchOfShapes(BunchOfShapes &&that) = default;
+
+    BunchOfShapes &operator=(BunchOfShapes const &that) = default;
+
+    BunchOfShapes &operator=(BunchOfShapes &&that) noexcept = default;
+
+    ~BunchOfShapes() {
+        for (int i = 0; i < shapes.getTop(); i++) {
+            delete shapes[i];
+        }
+    }
+
     void addPoint(istream &input) {
-        Point pointToInsert = getPointFromStream(input);
-        pointToInsert.draw(board);
-        shapes.insert(&pointToInsert);
+        Point *pointToInsert = new Point;
+        *pointToInsert = getPointFromStream(input);
+        pointToInsert->draw(board);
+        shapes.insert(pointToInsert);
     }
 
     void addLine(istream &input) {
-        Line lineToInsert = getLineFromStream(input);
-        lineToInsert.draw(board);
-        shapes.insert(&lineToInsert);
+        Line *lineToInsert = new Line;
+        *lineToInsert = getLineFromStream(input);
+        lineToInsert->draw(board);
+        shapes.insert(lineToInsert);
     }
 
     void addEllipse(istream &input) {
-        Ellipse ellipseToInsert = getEllipseFromStream(input);
-        ellipseToInsert.draw(board);
-        shapes.insert(&ellipseToInsert);
+        Ellipse *ellipseToInsert = new Ellipse;
+        *ellipseToInsert = getEllipseFromStream(input);
+        ellipseToInsert->draw(board);
+        shapes.insert(ellipseToInsert);
     }
 
     void addPolygon(istream &input) {
-        Polygon polygonToInsert = getPolygonFromStream(input);
-        polygonToInsert.draw(board);
-        shapes.insert(&polygonToInsert);
+        Polygon *polygonToInsert = new Polygon;
+        *polygonToInsert = getPolygonFromStream(input);
+        polygonToInsert->draw(board);
+        shapes.insert(polygonToInsert);
     }
 
 private:

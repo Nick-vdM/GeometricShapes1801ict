@@ -62,7 +62,7 @@ public:
 
     Point &operator=(Point &&that) noexcept;
 
-    ~Point();
+    ~Point() override;
 
     void draw(screen &s) override;
 
@@ -83,7 +83,7 @@ public:
 
     Line &operator=(Line &&that) noexcept;
 
-    ~Line();
+    ~Line() override;
 
     void draw(screen &s) override;
 
@@ -120,7 +120,7 @@ public:
 
     Ellipse &operator=(Ellipse &&that) noexcept;
 
-    ~Ellipse();
+    ~Ellipse() override;
 
     void draw(screen &s) override;
 
@@ -155,7 +155,7 @@ public:
 
     Polygon &operator=(Polygon &&that) noexcept;
 
-    ~Polygon();
+    ~Polygon() override;
 
     void draw(screen &s) override;
 

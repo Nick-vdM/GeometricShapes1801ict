@@ -8,7 +8,7 @@
 
 
 void printHelp() {
-    std::cout << "==============================HELP MENU================================="
+    std::cout << "==============================HELP MENU=================================" << std::endl
               << "To insert a shape type <shapename> <units>." << std::endl
               << "Shapes:" << std::endl
               << "\t point <x> <y> <Symbol>" << std::endl
