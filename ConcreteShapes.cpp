@@ -32,35 +32,29 @@ void Point::info(ostream &output) {
            << symbol << std::endl;
 }
 
-int Point::getXAnchor() {
+int Point::getXAnchor() const {
     return xAnchor;
 }
 
-int Point::getYAnchor() {
+int Point::getYAnchor() const {
     return yAnchor;
 }
 
-void Point::setYAnchor(int pos) {
-    yAnchor = pos;
-}
-
-void Point::setXAnchor(int pos) {
-    xAnchor = pos;
-}
-
-void Point::setAnchors(int xPos, int yPos) {
-    xAnchor = xPos;
-    yAnchor = yPos;
-}
-
-void Point::setSymbol(char pSymbol) {
-    symbol = pSymbol;
-}
-
-char Point::getSymbol() {
+char Point::getSymbol() const {
     return symbol;
 }
 
+void Point::setXAnchor(int xAnchor) {
+    Point::xAnchor = xAnchor;
+}
+
+void Point::setYAnchor(int yAnchor) {
+    Point::yAnchor = yAnchor;
+}
+
+void Point::setSymbol(char symbol) {
+    Point::symbol = symbol;
+}
 
 Line::Line() : Line(0, 0, 1, 1, 'L') {}
 
@@ -90,59 +84,44 @@ void Line::info(ostream &output) {
            << symbol << std::endl;
 }
 
-int Line::getXAnchor() {
+int Line::getXAnchor() const {
     return xAnchor;
 }
 
-int Line::getYAnchor() {
+int Line::getYAnchor() const {
     return yAnchor;
 }
 
-void Line::setYAnchor(int pos) {
-    yAnchor = pos;
-}
-
-void Line::setXAnchor(int pos) {
-    xAnchor = pos;
-}
-
-void Line::setAnchors(int xPos, int yPos) {
-    xAnchor = xPos;
-    yAnchor = yPos;
-}
-
-void Line::setSymbol(char pSymbol) {
-    symbol = pSymbol;
-}
-
-char Line::getSymbol() {
-    return symbol;
-}
-
-void Line::setDest(int xPos, int yPos) {
-    toX = xPos;
-    toY = yPos;
-}
-
-int Line::getToX() {
+int Line::getToX() const {
     return toX;
 }
 
-int Line::getToY() {
+int Line::getToY() const {
     return toY;
 }
 
-void Line::setToY(int pos) {
-    toY = pos;
+char Line::getSymbol() const {
+    return symbol;
 }
 
-void Line::setToX(int pos) {
-    toX = pos;
+void Line::setXAnchor(int xAnchor) {
+    Line::xAnchor = xAnchor;
 }
 
-void Line::setTos(int xPos, int yPos) {
-    toX = xPos;
-    toY = yPos;
+void Line::setYAnchor(int yAnchor) {
+    Line::yAnchor = yAnchor;
+}
+
+void Line::setToX(int toX) {
+    Line::toX = toX;
+}
+
+void Line::setToY(int toY) {
+    Line::toY = toY;
+}
+
+void Line::setSymbol(char symbol) {
+    Line::symbol = symbol;
 }
 
 Ellipse::Ellipse() : Ellipse(0, 0, 1, 1, 'E') {}
@@ -173,54 +152,44 @@ void Ellipse::info(ostream &output) {
            << symbol << std::endl;
 }
 
-int Ellipse::getXAnchor() {
+int Ellipse::getXAnchor() const {
     return xAnchor;
 }
 
-int Ellipse::getYAnchor() {
+int Ellipse::getYAnchor() const {
     return yAnchor;
 }
 
-void Ellipse::setYAnchor(int pos) {
-    yAnchor = pos;
-}
-
-void Ellipse::setXAnchor(int pos) {
-    xAnchor = pos;
-}
-
-void Ellipse::setAnchors(int xPos, int yPos) {
-    xAnchor = xPos;
-    yAnchor = yPos;
-}
-
-void Ellipse::setSymbol(char pSymbol) {
-    symbol = pSymbol;
-}
-
-char Ellipse::getSymbol() {
-    return symbol;
-}
-
-void Ellipse::setRadii(int xPos, int yPos) {
-    xRadius = xPos;
-    yRadius = yPos;
-}
-
-void Ellipse::setXRadius(int pos) {
-    xRadius = pos;
-}
-
-void Ellipse::setYRadius(int pos) {
-    yRadius = pos;
-}
-
-int Ellipse::getXRadius() {
+int Ellipse::getXRadius() const {
     return xRadius;
 }
 
-int Ellipse::getYRadius() {
+int Ellipse::getYRadius() const {
     return yRadius;
+}
+
+char Ellipse::getSymbol() const {
+    return symbol;
+}
+
+void Ellipse::setXAnchor(int xAnchor) {
+    Ellipse::xAnchor = xAnchor;
+}
+
+void Ellipse::setYAnchor(int yAnchor) {
+    Ellipse::yAnchor = yAnchor;
+}
+
+void Ellipse::setXRadius(int xRadius) {
+    Ellipse::xRadius = xRadius;
+}
+
+void Ellipse::setYRadius(int yRadius) {
+    Ellipse::yRadius = yRadius;
+}
+
+void Ellipse::setSymbol(char symbol) {
+    Ellipse::symbol = symbol;
 }
 
 Polygon::Polygon() : Polygon(0, 0, 3, 1, 't') {}
@@ -251,59 +220,43 @@ void Polygon::info(ostream &output) {
            << symbol << std::endl;
 }
 
-int Polygon::getXAnchor() {
+int Polygon::getXAnchor() const {
     return xAnchor;
 }
 
-int Polygon::getYAnchor() {
+int Polygon::getYAnchor() const {
     return yAnchor;
 }
 
-void Polygon::setYAnchor(int pos) {
-    yAnchor = pos;
-}
-
-void Polygon::setXAnchor(int pos) {
-    xAnchor = pos;
-}
-
-void Polygon::setAnchors(int xPos, int yPos) {
-    xAnchor = xPos;
-    yAnchor = yPos;
-}
-
-void Polygon::setSymbol(char pSymbol) {
-    symbol = pSymbol;
-}
-
-char Polygon::getSymbol() {
-    return symbol;
-}
-
-int Polygon::getSideCount() {
+int Polygon::getSideCount() const {
     return sideCount;
 }
 
-void Polygon::setSideCount(int count) {
-    sideCount = count;
-}
-
-int Polygon::getSideLength() {
+int Polygon::getSideLength() const {
     return sideLength;
 }
 
-void Polygon::setSideLength(int length) {
-    sideLength = length;
+char Polygon::getSymbol() const {
+    return symbol;
 }
 
+void Polygon::setXAnchor(int xAnchor) {
+    Polygon::xAnchor = xAnchor;
+}
 
+void Polygon::setYAnchor(int yAnchor) {
+    Polygon::yAnchor = yAnchor;
+}
 
+void Polygon::setSideCount(int sideCount) {
+    Polygon::sideCount = sideCount;
+}
 
+void Polygon::setSideLength(int sideLength) {
+    Polygon::sideLength = sideLength;
+}
 
-
-
-
-
-
-
+void Polygon::setSymbol(char symbol) {
+    Polygon::symbol = symbol;
+}
 

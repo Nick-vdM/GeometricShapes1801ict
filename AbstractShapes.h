@@ -10,7 +10,7 @@
 class Shape {
 public:
     Shape();
-    
+
     Shape(int pXAnchor, int pYAnchor, char pSymbol);
 
     Shape(Shape const &that);
@@ -23,13 +23,13 @@ public:
 
     virtual ~Shape() = 0;
 
-    virtual void draw(screen & s) = 0;
+    virtual void draw(screen &s) = 0;
 
     virtual void info() = 0;
 
-    int getXAnchor();
+    int getXAnchor() const;
 
-    int getYAnchor();
+    int getYAnchor() const;
 
     void setYAnchor(int pos);
 
@@ -39,7 +39,7 @@ public:
 
     void setSymbol(char pSymbol);
 
-    char getSymbol();
+    char getSymbol() const;
 
 protected:
     int xAnchor;
@@ -48,7 +48,7 @@ protected:
 
 };
 
-class Point : public Shape{
+class Point : public Shape {
 public:
     Point();
 
@@ -67,6 +67,7 @@ public:
     void draw(screen &s) override;
 
     void info() override;
+
 };
 
 class Line : public Shape {
@@ -89,17 +90,13 @@ public:
 
     void info() override;
 
-    void setDest(int xPos, int yPos);
+    int getToX() const;
 
-    int getXDest();
+    int getToY() const;
 
-    int getYDest();
+    void setToX(int toX);
 
-    void setYDest(int pos);
-
-    void setXDest(int pos);
-
-    void setDests(int xPos, int yPos);
+    void setToY(int toY);
 
 private:
     int toX;
@@ -132,9 +129,9 @@ public:
 
     void setYRadius(int pos);
 
-    int getXRadius();
+    int getXRadius() const;
 
-    int getYRadius();
+    int getYRadius() const;
 
 private:
     int xRadius;
@@ -161,11 +158,11 @@ public:
 
     void info() override;
 
-    int getSideCount();
+    int getSideCount() const;
 
     void setSideCount(int count);
 
-    int getSideLength();
+    int getSideLength() const;
 
     void setSideLength(int length);
 

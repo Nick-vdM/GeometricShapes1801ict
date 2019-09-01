@@ -27,19 +27,17 @@ public:
 
     void info(ostream &output);
 
-    int getXAnchor();
+    int getXAnchor() const;
 
-    int getYAnchor();
+    int getYAnchor() const;
 
-    void setYAnchor(int pos);
+    char getSymbol() const;
 
-    void setXAnchor(int pos);
+    void setXAnchor(int xAnchor);
 
-    void setAnchors(int xPos, int yPos);
+    void setYAnchor(int yAnchor);
 
-    void setSymbol(char pSymbol);
-
-    char getSymbol();
+    void setSymbol(char symbol);
 
 private:
     int xAnchor;
@@ -68,31 +66,25 @@ public:
 
     void info(ostream &output);
 
-    int getXAnchor();
+    int getXAnchor() const;
 
-    int getYAnchor();
+    int getYAnchor() const;
 
-    void setYAnchor(int pos);
+    int getToX() const;
 
-    void setXAnchor(int pos);
+    int getToY() const;
 
-    void setAnchors(int xPos, int yPos);
+    char getSymbol() const;
 
-    void setSymbol(char pSymbol);
+    void setXAnchor(int xAnchor);
 
-    char getSymbol();
+    void setYAnchor(int yAnchor);
 
-    void setDest(int xPos, int yPos);
+    void setToX(int toX);
 
-    int getToX();
+    void setToY(int toY);
 
-    int getToY();
-
-    void setToY(int pos);
-
-    void setToX(int pos);
-
-    void setTos(int xPos, int yPos);
+    void setSymbol(char symbol);
 
 private:
     int xAnchor;
@@ -122,29 +114,26 @@ public:
 
     void info(ostream &output);
 
-    int getXAnchor();
+    int getXAnchor() const;
 
-    int getYAnchor();
+    int getYAnchor() const;
 
-    void setYAnchor(int pos);
+    int getXRadius() const;
 
-    void setXAnchor(int pos);
+    int getYRadius() const;
 
-    void setAnchors(int xPos, int yPos);
+    char getSymbol() const;
 
-    void setSymbol(char pSymbol);
+    void setXAnchor(int xAnchor);
 
-    char getSymbol();
+    void setYAnchor(int yAnchor);
 
-    void setRadii(int xPos, int yPos);
+    void setXRadius(int xRadius);
 
-    void setXRadius(int pos);
+    void setYRadius(int yRadius);
 
-    void setYRadius(int pos);
+    void setSymbol(char symbol);
 
-    int getXRadius();
-
-    int getYRadius();
 
 private:
     int xAnchor;
@@ -172,29 +161,27 @@ public:
 
     void draw(screen &s);
 
-    int getXAnchor();
-
-    int getYAnchor();
-
-    void setYAnchor(int pos);
-
-    void setXAnchor(int pos);
-
-    void setAnchors(int xPos, int yPos);
-
-    void setSymbol(char pSymbol);
-
-    char getSymbol();
-
     void info(ostream &output);
 
-    int getSideCount();
+    int getXAnchor() const;
 
-    void setSideCount(int count);
+    int getYAnchor() const;
 
-    int getSideLength();
+    int getSideCount() const;
 
-    void setSideLength(int length);
+    int getSideLength() const;
+
+    char getSymbol() const;
+
+    void setXAnchor(int xAnchor);
+
+    void setYAnchor(int yAnchor);
+
+    void setSideCount(int sideCount);
+
+    void setSideLength(int sideLength);
+
+    void setSymbol(char symbol);
 
 private:
     int xAnchor;
@@ -202,6 +189,7 @@ private:
     int sideCount;
     int sideLength;
     char symbol;
+
 };
 
 #endif //GEOMETRICSHAPES_CONCRETESHAPES_H

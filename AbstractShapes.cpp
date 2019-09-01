@@ -19,11 +19,11 @@ Shape &Shape::operator=(Shape &&that) noexcept = default;
 
 Shape::~Shape() = default;
 
-int Shape::getXAnchor() {
+int Shape::getXAnchor() const {
     return xAnchor;
 }
 
-int Shape::getYAnchor() {
+int Shape::getYAnchor() const {
     return yAnchor;
 }
 
@@ -44,7 +44,7 @@ void Shape::setSymbol(char pSymbol) {
     symbol = pSymbol;
 }
 
-char Shape::getSymbol() {
+char Shape::getSymbol() const {
     return symbol;
 }
 
@@ -104,30 +104,20 @@ void Line::info() {
               << symbol << std::endl;
 }
 
-void Line::setDest(int xPos, int yPos) {
-    toX = xPos;
-    toY = yPos;
-}
-
-int Line::getXDest() {
+int Line::getToX() const {
     return toX;
 }
 
-int Line::getYDest() {
+int Line::getToY() const {
     return toY;
 }
 
-void Line::setYDest(int pos) {
-    toY = pos;
+void Line::setToX(int toX) {
+    Line::toX = toX;
 }
 
-void Line::setXDest(int pos) {
-    toX = pos;
-}
-
-void Line::setDests(int xPos, int yPos) {
-    toX = xPos;
-    toY = yPos;
+void Line::setToY(int toY) {
+    Line::toY = toY;
 }
 
 Ellipse::Ellipse() : Ellipse(0, 0, 1, 1, 'E') {}
@@ -171,11 +161,11 @@ void Ellipse::setYRadius(int pos) {
     yRadius = pos;
 }
 
-int Ellipse::getXRadius() {
+int Ellipse::getXRadius() const {
     return xRadius;
 }
 
-int Ellipse::getYRadius() {
+int Ellipse::getYRadius() const {
     return yRadius;
 }
 
@@ -207,7 +197,7 @@ void Polygon::info() {
               << symbol << std::endl;
 }
 
-int Polygon::getSideCount() {
+int Polygon::getSideCount() const {
     return sideCount;
 }
 
@@ -215,7 +205,7 @@ void Polygon::setSideCount(int count) {
     sideCount = count;
 }
 
-int Polygon::getSideLength() {
+int Polygon::getSideLength() const {
     return sideLength;
 }
 
