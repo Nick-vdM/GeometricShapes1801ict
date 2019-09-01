@@ -46,31 +46,58 @@ public:
     }
 
     void addPoint(istream &input) {
-        Point *pointToInsert = new Point;
-        *pointToInsert = getPointFromStream(input);
-        pointToInsert->draw(board);
-        shapes.insert(pointToInsert);
+        try {
+            Point *pointToInsert = new Point;
+            *pointToInsert = getPointFromStream(input);
+            pointToInsert->draw(board);
+            shapes.insert(pointToInsert);
+        } catch (const std::exception &e) {
+            std::cout << "ERROR " << e.what() << " INVALID INPUT" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<int>::max(), '\n');
+        }
     }
 
     void addLine(istream &input) {
-        Line *lineToInsert = new Line;
-        *lineToInsert = getLineFromStream(input);
-        lineToInsert->draw(board);
-        shapes.insert(lineToInsert);
+        try {
+            Line *lineToInsert = new Line;
+            *lineToInsert = getLineFromStream(input);
+            lineToInsert->draw(board);
+            shapes.insert(lineToInsert);
+        } catch (const std::exception &e) {
+            std::cout << "ERROR " << e.what() << " INVALID INPUT" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<int>::max(), '\n');
+        }
+
     }
 
     void addEllipse(istream &input) {
-        Ellipse *ellipseToInsert = new Ellipse;
-        *ellipseToInsert = getEllipseFromStream(input);
-        ellipseToInsert->draw(board);
-        shapes.insert(ellipseToInsert);
+        try {
+            Ellipse *ellipseToInsert = new Ellipse;
+            *ellipseToInsert = getEllipseFromStream(input);
+            ellipseToInsert->draw(board);
+            shapes.insert(ellipseToInsert);
+        } catch (const std::exception &e) {
+            std::cout << "ERROR " << e.what() << " INVALID INPUT" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<int>::max(), '\n');
+        }
+
     }
 
     void addPolygon(istream &input) {
-        Polygon *polygonToInsert = new Polygon;
-        *polygonToInsert = getPolygonFromStream(input);
-        polygonToInsert->draw(board);
-        shapes.insert(polygonToInsert);
+        try {
+            Polygon *polygonToInsert = new Polygon;
+            *polygonToInsert = getPolygonFromStream(input);
+            polygonToInsert->draw(board);
+            shapes.insert(polygonToInsert);
+        } catch (const std::exception &e) {
+            std::cout << "ERROR " << e.what() << " INVALID INPUT" << std::endl;
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<int>::max(), '\n');
+        }
+
     }
 
 private:
