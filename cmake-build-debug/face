@@ -1,7 +1,7 @@
-line x y xp yp s 		3 3 3 0 |
-line x y xp yp s 		-3 3 -3 0 |
-line x y xp yp s 		-4 -5 4 -5 _
-line x y xp yp s 		-5 -4 -6 -3 \
-line x y xp yp s 		4 -5 6 -3 /
-line x y xp yp s 		-5 -4 -6 -3 \
-ellipse x y a b s 		0 0 8 12 #
+line 3 3 3 0 |
+line -3 3 -3 0 |
+line -4 -5 4 -5 _
+line -5 -4 -6 -3 \
+line 4 -5 6 -3 /
+line -5 -4 -6 -3 \
+ellipse 0 0 8 12 #

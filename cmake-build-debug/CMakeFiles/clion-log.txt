@@ -1,4 +1,4 @@
-/home/nick/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6262.62/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes"
+C:\Users\nicol\.CLion2019.1\system\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes"
 -- Configuring done
 -- Generating done
--- Build files have been written to: /media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug
+-- Build files have been written to: /cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug

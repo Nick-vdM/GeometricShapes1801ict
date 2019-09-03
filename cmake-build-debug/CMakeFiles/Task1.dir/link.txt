@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Task1.dir/Task1.cpp.o  -o Task1 
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Task1.dir/Task1.cpp.o  -o Task1.exe -Wl,--out-implib,libTask1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

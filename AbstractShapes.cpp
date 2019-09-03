@@ -69,7 +69,7 @@ void Point::draw(screen &s) {
 
 void Point::info() {
     //Prints the information to console
-    std::cout << "point x y s \t\t"
+    std::cout << "point "
               << xAnchor << " "
               << yAnchor << " "
               << symbol << std::endl;
@@ -96,7 +96,7 @@ void Line::draw(screen &s) {
 }
 
 void Line::info() {
-    std::cout << "line x y xp yp s \t\t"
+    std::cout << "line "
               << xAnchor << " "
               << yAnchor << " "
               << toX << " "
@@ -140,7 +140,7 @@ void Ellipse::draw(screen &s) {
 }
 
 void Ellipse::info() {
-    std::cout << "ellipse x y a b s \t\t"
+    std::cout << "ellipse "
               << xAnchor << " "
               << yAnchor << " "
               << xRadius << " "
@@ -189,7 +189,7 @@ void Polygon::draw(screen &s) {
 }
 
 void Polygon::info() {
-    std::cout << "polygon x y n l s \t\t"
+    std::cout << "polygon "
               << xAnchor << " "
               << yAnchor << " "
               << sideCount << " "

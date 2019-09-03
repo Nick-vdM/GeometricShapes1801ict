@@ -26,7 +26,7 @@ void Point::draw(screen &s) {
 
 void Point::info(ostream &output) {
     //Prints the information to console
-    output << "point\t\t"
+    output << "point "
            << xAnchor << " "
            << yAnchor << " "
            << symbol << std::endl;
@@ -76,7 +76,7 @@ void Line::draw(screen &s) {
 }
 
 void Line::info(ostream &output) {
-    output << "line\t\t"
+    output << "line "
            << xAnchor << " "
            << yAnchor << " "
            << toX << " "
@@ -144,7 +144,7 @@ void Ellipse::draw(screen &s) {
 }
 
 void Ellipse::info(ostream &output) {
-    output << "ellipse\t\t"
+    output << "ellipse "
            << xAnchor << " "
            << yAnchor << " "
            << xRadius << " "
@@ -212,7 +212,7 @@ void Polygon::draw(screen &s) {
 }
 
 void Polygon::info(ostream &output) {
-    output << "polygon\t\t"
+    output << "polygon "
            << xAnchor << " "
            << yAnchor << " "
            << sideCount << " "

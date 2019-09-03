@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/screen.dir/screen.cpp.o"
+  "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/screen.dir/screen.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
