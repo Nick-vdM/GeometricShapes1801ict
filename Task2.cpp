@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cstdlib>
 #include "AbstractShapes.cpp"
 #include "Bunch.cpp"
 
@@ -15,9 +16,10 @@ void printHelp() {
               << "\t line <startX> <startY> <toX> <toY> <Symbol>" << std::endl
               << "\t ellipse <centreX> <centreY> <xRadius> <yRadius> <Symbol>" << std::endl
               << "\t Polygon <centreX> <centreY> <numberOfSides> <sideLength> <Symbol>" << std::endl
-              << "THERE IS NO SAVING IN TASK 2" << std::endl
+              << "THERE IS NO SAVING/LOADING IN PART 2. USE FILL SCREEN INSTEAD" << std::endl
               << "Note the board is x <- [-20, 20] & y <- [-20, 20]" << std::endl
               << "Type enter 'display' to show the board" << std::endl
+              << "Type 'fill' to randomly fill the entire screen" << std::endl
               << "Invalid input brings up this screen" << std::endl
               << "Type 'exit' to close the program" << std::endl
               << "======================================================================="
@@ -100,7 +102,75 @@ public:
 
     }
 
+    void fillScreen() {
+        //Generate random shapes and fill the screen
+        //Purely for testing purposes
+        for (int i = 0; i < shapes.getTop(); i++) {
+            delete shapes[i];
+        }
+        shapes.clear();
+        for (int i = 0; i < shapes.getSize(); i++) {
+            switch (rand() % 4) {
+                case 0:
+                    generateRandomPoint();
+                    break;
+                case 1:
+                    generateRandomLine();
+                    break;
+                case 2:
+                    generateRandomEllipse();
+                    break;
+                case 3:
+                    generateRandomPolygon();
+                    break;
+            }
+        }
+    }
+
 private:
+
+    void generateRandomPoint() {
+        Point *pointToInsert = new Point(
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                static_cast<char>((rand() % 57) + 33));
+        pointToInsert->draw(board);
+        shapes.insert(pointToInsert);
+    }
+
+    void generateRandomLine() {
+        Line *lineToInsert = new Line(
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                static_cast<char>((rand() % 57) + 33));
+        lineToInsert->draw(board);
+        shapes.insert(lineToInsert);
+    }
+
+    void generateRandomEllipse() {
+        Ellipse *ellipseToInsert = new Ellipse(
+                (rand() % 35) - 15,
+                (rand() % 35) - 15,
+                (rand() % 3) + 2,
+                (rand() % 3) + 2,
+                static_cast<char>((rand() % 57) + 33));
+        ellipseToInsert->draw(board);
+        shapes.insert(ellipseToInsert);
+    }
+
+    void generateRandomPolygon() {
+        Polygon *polygonToInsert = new Polygon(
+                (rand() % 28) - 14,
+                (rand() % 28) - 14,
+                (rand() % 8) + 3,
+                (rand() % 8) + 3,
+                static_cast<char>((rand() % 57) + 33));
+        polygonToInsert->draw(board);
+        shapes.insert(polygonToInsert);
+    }
+
     static Point getPointFromStream(istream &input) {
         char instruction[255];
         input >> instruction;
@@ -157,7 +227,12 @@ private:
         return Polygon(xAnchor, yAnchor, sideCount, sideLength, symbol);
     }
 
+    void loadFromFile(char *path);
+
+    void saveToFile(char *path);
 };
+
+
 
 void testConstructors() {
     //VERIFY ME WITH A DEBUGGER (I verified it myself, but I didn't want to flood with prints
@@ -224,6 +299,8 @@ void demonstrate() {
             Shapes.shapes.display();
         } else if (strcmp("display", instruction) == 0) {
             Shapes.board.display();
+        } else if (strcmp("fill", instruction) == 0) {
+            Shapes.fillScreen();
         } else if (strcmp("exit", instruction) == 0) {
             keepLooping = false;
         } else {

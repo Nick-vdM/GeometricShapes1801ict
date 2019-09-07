@@ -20,6 +20,7 @@ void printHelp() {
               << "\tload <loadName>" << std::endl
               << "Note the board is x <- [-20, 20] & y <- [-20, 20]" << std::endl
               << "Type enter 'display' to show the board" << std::endl
+              << "Type 'fill' to randomly fill the entire screen" << std::endl
               << "Invalid input brings up this screen" << std::endl
               << "Type 'exit' to close the program" << std::endl
               << "======================================================================="
@@ -86,7 +87,62 @@ public:
 
     void saveToFile(char *path);
 
+    void fillScreen() {
+        for (int i = 0;
+             i < points.getSize() &&
+             i < lines.getSize() &&
+             i < ellipses.getSize() &&
+             i < polygons.getSize(); i++) {
+            generateRandomPoint();
+            generateRandomLine();
+            generateRandomEllipse();
+            generateRandomPolygon();
+        }
+    }
+
 private:
+    void generateRandomPoint() {
+        Point pointToInsert = Point(
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                static_cast<char>((rand() % 57) + 33));
+        pointToInsert.draw(board);
+        points.insert(pointToInsert);
+    }
+
+    void generateRandomLine() {
+        Line lineToInsert = Line(
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                (rand() % 40) - 20,
+                static_cast<char>((rand() % 57) + 33));
+        lineToInsert.draw(board);
+        lines.insert(lineToInsert);
+    }
+
+    void generateRandomEllipse() {
+        Ellipse ellipseToInsert = Ellipse(
+                (rand() % 35) - 15,
+                (rand() % 35) - 15,
+                (rand() % 3) + 2,
+                (rand() % 3) + 2,
+                static_cast<char>((rand() % 57) + 33));
+        ellipseToInsert.draw(board);
+        ellipses.insert(ellipseToInsert);
+    }
+
+    void generateRandomPolygon() {
+        Polygon polygonToInsert = Polygon(
+                (rand() % 28) - 14,
+                (rand() % 28) - 14,
+                (rand() % 8) + 3,
+                (rand() % 8) + 3,
+                static_cast<char>((rand() % 57) + 33));
+        polygonToInsert.draw(board);
+        polygons.insert(polygonToInsert);
+    }
+
     static Point getPointFromStream(istream &input) {
         char instruction[255];
         input >> instruction;
@@ -257,6 +313,8 @@ void demonstrate() {
         } else if (strcmp("load", instruction) == 0) {
             std::cin >> instruction;
             Shapes.loadFromFile(instruction);
+        } else if (strcmp("fill", instruction) == 0) {
+            Shapes.fillScreen();
         } else if (strcmp("exit", instruction) == 0) {
             keepLooping = false;
         } else {

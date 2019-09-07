@@ -1,8 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Task1.dir/Task1.cpp.o"
   "Task1.pdb"
-  "Task1.exe"
-  "libTask1.dll.a"
+  "Task1"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/nicol/.CLion2019.1/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /home/nick/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6262.62/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/nicol/.CLion2019.1/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /home/nick/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6262.62/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes"
+CMAKE_SOURCE_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"
+CMAKE_BINARY_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/Task2.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/Task2.dir/flags.make
 
 CMakeFiles/Task2.dir/Task2.cpp.o: CMakeFiles/Task2.dir/flags.make
 CMakeFiles/Task2.dir/Task2.cpp.o: ../Task2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Task2.dir/Task2.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Task2.dir/Task2.cpp.o -c "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task2.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Task2.dir/Task2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Task2.dir/Task2.cpp.o -c "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task2.cpp"
 
 CMakeFiles/Task2.dir/Task2.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Task2.dir/Task2.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task2.cpp" > CMakeFiles/Task2.dir/Task2.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task2.cpp" > CMakeFiles/Task2.dir/Task2.cpp.i
 
 CMakeFiles/Task2.dir/Task2.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Task2.dir/Task2.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task2.cpp" -o CMakeFiles/Task2.dir/Task2.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task2.cpp" -o CMakeFiles/Task2.dir/Task2.cpp.s
 
 # Object files for target Task2
 Task2_OBJECTS = \
@@ -77,14 +77,14 @@ Task2_OBJECTS = \
 # External object files for target Task2
 Task2_EXTERNAL_OBJECTS =
 
-Task2.exe: CMakeFiles/Task2.dir/Task2.cpp.o
-Task2.exe: CMakeFiles/Task2.dir/build.make
-Task2.exe: CMakeFiles/Task2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Task2.exe"
+Task2: CMakeFiles/Task2.dir/Task2.cpp.o
+Task2: CMakeFiles/Task2.dir/build.make
+Task2: CMakeFiles/Task2.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Task2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Task2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Task2.dir/build: Task2.exe
+CMakeFiles/Task2.dir/build: Task2
 
 .PHONY : CMakeFiles/Task2.dir/build
 
@@ -93,6 +93,6 @@ CMakeFiles/Task2.dir/clean:
 .PHONY : CMakeFiles/Task2.dir/clean
 
 CMakeFiles/Task2.dir/depend:
-	cd "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/Task2.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/Task2.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/Task2.dir/depend
 

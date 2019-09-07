@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /cygdrive/c/Users/nicol/.CLion2019.1/system/cygwin_cmake/bin/cmake.exe
+CMAKE_COMMAND = /home/nick/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6262.62/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /cygdrive/c/Users/nicol/.CLion2019.1/system/cygwin_cmake/bin/cmake.exe -E remove -f
+RM = /home/nick/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.6262.62/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes"
+CMAKE_SOURCE_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"
+CMAKE_BINARY_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/screen.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/screen.dir/flags.make
 
 CMakeFiles/screen.dir/screen.cpp.o: CMakeFiles/screen.dir/flags.make
 CMakeFiles/screen.dir/screen.cpp.o: ../screen.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/screen.dir/screen.cpp.o"
-	/usr/bin/c++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/screen.dir/screen.cpp.o -c "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/screen.dir/screen.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/screen.dir/screen.cpp.o -c "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp"
 
 CMakeFiles/screen.dir/screen.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/screen.dir/screen.cpp.i"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp" > CMakeFiles/screen.dir/screen.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp" > CMakeFiles/screen.dir/screen.cpp.i
 
 CMakeFiles/screen.dir/screen.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/screen.dir/screen.cpp.s"
-	/usr/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp" -o CMakeFiles/screen.dir/screen.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/screen.cpp" -o CMakeFiles/screen.dir/screen.cpp.s
 
 # Object files for target screen
 screen_OBJECTS = \
@@ -77,14 +77,14 @@ screen_OBJECTS = \
 # External object files for target screen
 screen_EXTERNAL_OBJECTS =
 
-screen.exe: CMakeFiles/screen.dir/screen.cpp.o
-screen.exe: CMakeFiles/screen.dir/build.make
-screen.exe: CMakeFiles/screen.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable screen.exe"
+screen: CMakeFiles/screen.dir/screen.cpp.o
+screen: CMakeFiles/screen.dir/build.make
+screen: CMakeFiles/screen.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable screen"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/screen.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/screen.dir/build: screen.exe
+CMakeFiles/screen.dir/build: screen
 
 .PHONY : CMakeFiles/screen.dir/build
 
@@ -93,6 +93,6 @@ CMakeFiles/screen.dir/clean:
 .PHONY : CMakeFiles/screen.dir/clean
 
 CMakeFiles/screen.dir/depend:
-	cd "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/cygdrive/c/Users/nicol/OneDrive - Griffith University/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/screen.dir/DependInfo.cmake" --color=$(COLOR)
+	cd "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug" "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles/screen.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/screen.dir/depend
 

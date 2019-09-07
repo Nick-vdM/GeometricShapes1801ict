@@ -1,1 +1,1 @@
-/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/screen.dir/screen.cpp.o  -o screen.exe -Wl,--out-implib,libscreen.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+/usr/bin/c++  -g   CMakeFiles/screen.dir/screen.cpp.o  -o screen 
