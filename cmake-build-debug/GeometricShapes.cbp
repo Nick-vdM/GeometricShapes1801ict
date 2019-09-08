@@ -27,18 +27,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="edit_cache">
-				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Task2">
-				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task2" prefix_auto="0" extension_auto="0"/>
+			<Target title="Task1">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -54,14 +44,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task2"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Task2/fast">
-				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task2" prefix_auto="0" extension_auto="0"/>
+			<Target title="Task1/fast">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task1" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -77,7 +67,7 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task2/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -129,8 +119,8 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Task1">
-				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task1" prefix_auto="0" extension_auto="0"/>
+			<Target title="Task2">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -146,14 +136,14 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task2"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="Task1/fast">
-				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task1" prefix_auto="0" extension_auto="0"/>
+			<Target title="Task2/fast">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/Task2" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
@@ -169,13 +159,121 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task1/fast"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 Task2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TemplatePainter">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/TemplatePainter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 TemplatePainter"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TemplatePainter/fast">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/TemplatePainter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 TemplatePainter/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PolymorphicPainter">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/PolymorphicPainter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 PolymorphicPainter"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PolymorphicPainter/fast">
+				<Option output="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/PolymorphicPainter" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 PolymorphicPainter/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/media/nick/UbuntuHDD/OD_Griffith_Uni/First\ Year/1801ICT\ -\ Object\ Oriented\ Programming/GeometricShapes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/1MyTemplatePainter.cpp">
+			<Option target="TemplatePainter"/>
+		</Unit>
+		<Unit filename="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/2MyPolymorphicPainter.cpp">
+			<Option target="PolymorphicPainter"/>
+		</Unit>
 		<Unit filename="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/Task1.cpp">
 			<Option target="Task1"/>
 		</Unit>

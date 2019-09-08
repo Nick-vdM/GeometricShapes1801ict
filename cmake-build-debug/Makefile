@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Task2
+# Target rules for targets named Task1
 
 # Build rule for target.
-Task2: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Task2
-.PHONY : Task2
+Task1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Task1
+.PHONY : Task1
 
 # fast build rule for target.
-Task2/fast:
-	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/build
-.PHONY : Task2/fast
+Task1/fast:
+	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/build
+.PHONY : Task1/fast
 
 #=============================================================================
 # Target rules for targets named screen
@@ -137,17 +137,97 @@ screen/fast:
 .PHONY : screen/fast
 
 #=============================================================================
-# Target rules for targets named Task1
+# Target rules for targets named Task2
 
 # Build rule for target.
-Task1: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Task1
-.PHONY : Task1
+Task2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Task2
+.PHONY : Task2
 
 # fast build rule for target.
-Task1/fast:
-	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/build
-.PHONY : Task1/fast
+Task2/fast:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/build
+.PHONY : Task2/fast
+
+#=============================================================================
+# Target rules for targets named TemplatePainter
+
+# Build rule for target.
+TemplatePainter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TemplatePainter
+.PHONY : TemplatePainter
+
+# fast build rule for target.
+TemplatePainter/fast:
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/build
+.PHONY : TemplatePainter/fast
+
+#=============================================================================
+# Target rules for targets named PolymorphicPainter
+
+# Build rule for target.
+PolymorphicPainter: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 PolymorphicPainter
+.PHONY : PolymorphicPainter
+
+# fast build rule for target.
+PolymorphicPainter/fast:
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/build
+.PHONY : PolymorphicPainter/fast
+
+1MyTemplatePainter.o: 1MyTemplatePainter.cpp.o
+
+.PHONY : 1MyTemplatePainter.o
+
+# target to build an object file
+1MyTemplatePainter.cpp.o:
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/1MyTemplatePainter.cpp.o
+.PHONY : 1MyTemplatePainter.cpp.o
+
+1MyTemplatePainter.i: 1MyTemplatePainter.cpp.i
+
+.PHONY : 1MyTemplatePainter.i
+
+# target to preprocess a source file
+1MyTemplatePainter.cpp.i:
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/1MyTemplatePainter.cpp.i
+.PHONY : 1MyTemplatePainter.cpp.i
+
+1MyTemplatePainter.s: 1MyTemplatePainter.cpp.s
+
+.PHONY : 1MyTemplatePainter.s
+
+# target to generate assembly for a file
+1MyTemplatePainter.cpp.s:
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/1MyTemplatePainter.cpp.s
+.PHONY : 1MyTemplatePainter.cpp.s
+
+2MyPolymorphicPainter.o: 2MyPolymorphicPainter.cpp.o
+
+.PHONY : 2MyPolymorphicPainter.o
+
+# target to build an object file
+2MyPolymorphicPainter.cpp.o:
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/2MyPolymorphicPainter.cpp.o
+.PHONY : 2MyPolymorphicPainter.cpp.o
+
+2MyPolymorphicPainter.i: 2MyPolymorphicPainter.cpp.i
+
+.PHONY : 2MyPolymorphicPainter.i
+
+# target to preprocess a source file
+2MyPolymorphicPainter.cpp.i:
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/2MyPolymorphicPainter.cpp.i
+.PHONY : 2MyPolymorphicPainter.cpp.i
+
+2MyPolymorphicPainter.s: 2MyPolymorphicPainter.cpp.s
+
+.PHONY : 2MyPolymorphicPainter.s
+
+# target to generate assembly for a file
+2MyPolymorphicPainter.cpp.s:
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/2MyPolymorphicPainter.cpp.s
+.PHONY : 2MyPolymorphicPainter.cpp.s
 
 Task1.o: Task1.cpp.o
 
@@ -237,10 +317,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... edit_cache"
-	@echo "... Task2"
-	@echo "... screen"
 	@echo "... Task1"
+	@echo "... screen"
+	@echo "... Task2"
+	@echo "... TemplatePainter"
+	@echo "... PolymorphicPainter"
+	@echo "... edit_cache"
+	@echo "... 1MyTemplatePainter.o"
+	@echo "... 1MyTemplatePainter.i"
+	@echo "... 1MyTemplatePainter.s"
+	@echo "... 2MyPolymorphicPainter.o"
+	@echo "... 2MyPolymorphicPainter.i"
+	@echo "... 2MyPolymorphicPainter.s"
 	@echo "... Task1.o"
 	@echo "... Task1.i"
 	@echo "... Task1.s"

@@ -237,7 +237,7 @@ void screen::polygon(int x, int y, int n, int l, char s) {
         yy[k] = l * sin(2 * pi * k / n);
     }
     for (int k = 0; k < n; ++k)
-        line(x + xx[k], y + yy[k], x + xx[(k + 1) % n], y + yy[(k + 1) % n], s);
+        line(x + xx[k], y + yy[k], x + xx[(k + 2) % n], y + yy[(k + 1) % n], s);
 }
 
 // plot a line from (x0,y0) to (x1, y1) using symbol s

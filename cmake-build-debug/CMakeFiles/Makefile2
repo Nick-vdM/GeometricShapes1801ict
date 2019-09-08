@@ -65,39 +65,39 @@ CMAKE_SOURCE_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - O
 CMAKE_BINARY_DIR = "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug"
 
 #=============================================================================
-# Target rules for target CMakeFiles/Task2.dir
+# Target rules for target CMakeFiles/Task1.dir
 
 # All Build rule for target.
-CMakeFiles/Task2.dir/all:
-	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/depend
-	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target Task2"
-.PHONY : CMakeFiles/Task2.dir/all
+CMakeFiles/Task1.dir/all:
+	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/depend
+	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=3,4 "Built target Task1"
+.PHONY : CMakeFiles/Task1.dir/all
 
 # Include target in all.
-all: CMakeFiles/Task2.dir/all
+all: CMakeFiles/Task1.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Task2.dir/rule: cmake_check_build_system
+CMakeFiles/Task1.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Task2.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Task1.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/Task2.dir/rule
+.PHONY : CMakeFiles/Task1.dir/rule
 
 # Convenience name for target.
-Task2: CMakeFiles/Task2.dir/rule
+Task1: CMakeFiles/Task1.dir/rule
 
-.PHONY : Task2
-
-# clean rule for target.
-CMakeFiles/Task2.dir/clean:
-	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/clean
-.PHONY : CMakeFiles/Task2.dir/clean
+.PHONY : Task1
 
 # clean rule for target.
-clean: CMakeFiles/Task2.dir/clean
+CMakeFiles/Task1.dir/clean:
+	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/clean
+.PHONY : CMakeFiles/Task1.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Task1.dir/clean
 
 .PHONY : clean
 
@@ -108,7 +108,7 @@ clean: CMakeFiles/Task2.dir/clean
 CMakeFiles/screen.dir/all:
 	$(MAKE) -f CMakeFiles/screen.dir/build.make CMakeFiles/screen.dir/depend
 	$(MAKE) -f CMakeFiles/screen.dir/build.make CMakeFiles/screen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target screen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=9,10 "Built target screen"
 .PHONY : CMakeFiles/screen.dir/all
 
 # Include target in all.
@@ -139,39 +139,113 @@ clean: CMakeFiles/screen.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/Task1.dir
+# Target rules for target CMakeFiles/Task2.dir
 
 # All Build rule for target.
-CMakeFiles/Task1.dir/all:
-	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/depend
-	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target Task1"
-.PHONY : CMakeFiles/Task1.dir/all
+CMakeFiles/Task2.dir/all:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/depend
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=5,6 "Built target Task2"
+.PHONY : CMakeFiles/Task2.dir/all
 
 # Include target in all.
-all: CMakeFiles/Task1.dir/all
+all: CMakeFiles/Task2.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/Task1.dir/rule: cmake_check_build_system
+CMakeFiles/Task2.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Task1.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Task2.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 0
-.PHONY : CMakeFiles/Task1.dir/rule
+.PHONY : CMakeFiles/Task2.dir/rule
 
 # Convenience name for target.
-Task1: CMakeFiles/Task1.dir/rule
+Task2: CMakeFiles/Task2.dir/rule
 
-.PHONY : Task1
-
-# clean rule for target.
-CMakeFiles/Task1.dir/clean:
-	$(MAKE) -f CMakeFiles/Task1.dir/build.make CMakeFiles/Task1.dir/clean
-.PHONY : CMakeFiles/Task1.dir/clean
+.PHONY : Task2
 
 # clean rule for target.
-clean: CMakeFiles/Task1.dir/clean
+CMakeFiles/Task2.dir/clean:
+	$(MAKE) -f CMakeFiles/Task2.dir/build.make CMakeFiles/Task2.dir/clean
+.PHONY : CMakeFiles/Task2.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/Task2.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TemplatePainter.dir
+
+# All Build rule for target.
+CMakeFiles/TemplatePainter.dir/all:
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/depend
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=7,8 "Built target TemplatePainter"
+.PHONY : CMakeFiles/TemplatePainter.dir/all
+
+# Include target in all.
+all: CMakeFiles/TemplatePainter.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TemplatePainter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TemplatePainter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/TemplatePainter.dir/rule
+
+# Convenience name for target.
+TemplatePainter: CMakeFiles/TemplatePainter.dir/rule
+
+.PHONY : TemplatePainter
+
+# clean rule for target.
+CMakeFiles/TemplatePainter.dir/clean:
+	$(MAKE) -f CMakeFiles/TemplatePainter.dir/build.make CMakeFiles/TemplatePainter.dir/clean
+.PHONY : CMakeFiles/TemplatePainter.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/TemplatePainter.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/PolymorphicPainter.dir
+
+# All Build rule for target.
+CMakeFiles/PolymorphicPainter.dir/all:
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/depend
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" --progress-num=1,2 "Built target PolymorphicPainter"
+.PHONY : CMakeFiles/PolymorphicPainter.dir/all
+
+# Include target in all.
+all: CMakeFiles/PolymorphicPainter.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/PolymorphicPainter.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PolymorphicPainter.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/media/nick/UbuntuHDD/OD_Griffith_Uni/First Year/1801ICT - Object Oriented Programming/GeometricShapes/cmake-build-debug/CMakeFiles" 0
+.PHONY : CMakeFiles/PolymorphicPainter.dir/rule
+
+# Convenience name for target.
+PolymorphicPainter: CMakeFiles/PolymorphicPainter.dir/rule
+
+.PHONY : PolymorphicPainter
+
+# clean rule for target.
+CMakeFiles/PolymorphicPainter.dir/clean:
+	$(MAKE) -f CMakeFiles/PolymorphicPainter.dir/build.make CMakeFiles/PolymorphicPainter.dir/clean
+.PHONY : CMakeFiles/PolymorphicPainter.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/PolymorphicPainter.dir/clean
 
 .PHONY : clean
 

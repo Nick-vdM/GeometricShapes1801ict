@@ -6,7 +6,6 @@
 #include "ConcreteShapes.cpp"
 #include "Bunch.cpp"
 
-
 void printHelp() {
     std::cout << "==============================HELP MENU=================================" << std::endl
               << "To insert a shape type <shapename> <units>." << std::endl
@@ -233,10 +232,10 @@ void BunchOfShapes::saveToFile(char *path) {
         std::cerr << "Failed to open file";
         exit(EXIT_FAILURE);
     }
-    points.display(ofs);
-    lines.display(ofs);
-    ellipses.display(ofs);
-    polygons.display(ofs);
+    points.list(ofs);
+    lines.list(ofs);
+    ellipses.list(ofs);
+    polygons.list(ofs);
 }
 
 void testConstructors() {
@@ -301,10 +300,10 @@ void demonstrate() {
         } else if (strcmp("polygon", instruction) == 0) {
             Shapes.addPolygon(std::cin);
         } else if (strcmp("list", instruction) == 0) {
-            Shapes.points.display(std::cout);
-            Shapes.lines.display(std::cout);
-            Shapes.ellipses.display(std::cout);
-            Shapes.polygons.display(std::cout);
+            Shapes.points.list(std::cout);
+            Shapes.lines.list(std::cout);
+            Shapes.ellipses.list(std::cout);
+            Shapes.polygons.list(std::cout);
         } else if (strcmp("display", instruction) == 0) {
             Shapes.board.display();
         } else if (strcmp("save", instruction) == 0) {

@@ -57,7 +57,7 @@ public:
 
     void display(); // Used for when its a pointer
 
-    void display(ostream &output); //Prints the Bunch to stdout
+    void list(ostream &output); //Prints the Bunch to stdout
 
     void clear();
 
@@ -307,7 +307,7 @@ void Bunch<T>::display() {
 }
 
 template<typename T>
-void Bunch<T>::display(ostream &output) {
+void Bunch<T>::list(ostream &output) {
     for (int i = 0; i < top; i++) {
         arr[i].info(output);
     }
