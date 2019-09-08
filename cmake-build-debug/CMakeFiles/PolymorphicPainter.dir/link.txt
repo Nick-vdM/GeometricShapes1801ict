@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/PolymorphicPainter.dir/2MyPolymorphicPainter.cpp.o  -o PolymorphicPainter 

@@ -1,0 +1,3 @@
+point x y s 		1 5 b
+line x y xp yp s 		1 5 3 7 l
+polygon x y n l s 		1 6 4 7 *
