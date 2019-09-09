@@ -38,8 +38,8 @@ copy pasted with a template
 
 ### 3. Main function ###
 * Four bunch objects: one for each shape
-* Provide a menu to draw all of the shapes
-* Function to list all the objects that have been painted
+* Provide a menu to draw all of the shapes individually and together
+* Function to list all the objects in the bunches
 
 #### 3.1. Saving shapes ####
 * Save and load from files using stream direction to 
